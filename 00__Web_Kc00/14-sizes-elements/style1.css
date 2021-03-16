@@ -1,0 +1,19 @@
+.px{
+    font-size: 10px;
+}
+
+.pt{
+    font-size: 10pt;
+}
+
+.em{
+    font-size: 2em;
+}
+
+.per{
+    font-size: 10%;
+}
+
+.marg{
+    padding: 5px;
+}

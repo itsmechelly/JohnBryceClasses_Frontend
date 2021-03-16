@@ -1,0 +1,21 @@
+  
+p:first-letter{
+    color: red;
+    font-size: large;
+}
+
+a:link{
+    color: blue
+}
+a:visited{
+    color:blue;
+}
+
+a:hover{
+    color: brown;
+    text-decoration: dashed;
+}
+
+a:active{
+    color: blue;
+}

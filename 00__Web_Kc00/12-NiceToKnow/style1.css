@@ -1,0 +1,27 @@
+input{
+    width:200px;
+}
+
+input[type="password"]{
+    color: royalblue;
+}
+
+input:focus{
+    color: chocolate;
+}
+
+img{
+    width: 100px;
+    height: 30px;
+}
+
+
+
+img:hover{
+    border: 2px solid greenyellow;
+}
+
+#stam p{
+    background-color: red;
+
+}

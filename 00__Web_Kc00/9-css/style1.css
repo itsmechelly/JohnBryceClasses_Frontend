@@ -1,0 +1,22 @@
+.nice{
+    color: blue;
+    background-color: antiquewhite;
+    font-family: monospace;
+    
+}
+
+#top{
+    font-size: large;
+}
+
+#bottom{
+    font-size: medium;
+}
+
+/* th,td{
+    color: blue;
+} */
+
+body{
+    color: blue;
+}

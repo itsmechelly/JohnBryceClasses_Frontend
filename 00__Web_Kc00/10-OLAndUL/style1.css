@@ -1,0 +1,11 @@
+li{
+    color: rgb(23, 0, 128);
+}
+
+#top>li{
+    color: aqua;
+}
+
+#bottom>li{
+    color: red;
+}
