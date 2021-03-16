@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Events</title>
+    <link rel="stylesheet" type="text/css" href="style1.css">
+    <script src="site1.js"></script>
+</head>
+
+<body>
+    <input id="txt" type="text" placeholder="pls insert text" onkeydown="changeColor()" onblur="showMessage()">
+    <!-- צור תיבת טקסט שכל הוספה של אות מחליפה את הצבע של הטקסט בין 2 צבעים קבועים.
+לאותה תיבת טקסט הוסף תכונה שכשאר עוזבים את התיבה עולה הודעה עם התוכן שלה.
+בנה דף עם תמונה, ספור כמה פעמים המשתמש עבר מעל התמונה, כאשר הוא עוזב את העמוד הראה הודעה עם מספר הפעמים.
+הכנס כמה תיבות טקסט (לפחות 3) וכפתור, כשלוחצים על הכפתור וודא שהמשתמש הכניס פרטים לכל התיבות. אם לא הצג הודעת שגיאה. אם כן, הצג את הפרטים משורשים להודעה אחת.
+     -->
+     <br>
+    <input type="button" onclick="myFunc()" value="Click me" />
+    <br>
+    <img src="../images/cat1.png" onmouseover="countMouseOverImage()" onunload="countTotal()">
+    <hr>
+    <input id="txt1" type="text">
+    <br>
+    <input id="txt2" type="text">
+    <br>
+    <input id="txt3" type="text">
+    <br>
+    <button onclick="checkIfAllGood()">Click!!!</button>
+    <br>
+</body>
+
+</html>
