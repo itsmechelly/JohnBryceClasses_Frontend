@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Declaring Variables</h1>
+
+    <script>
+        //declaring variables
+        // 2nd way to use variables: let -> restricted to scope, you cant see it outside of a scope, happened because backstage its has "hoisting", meaning, like in Java when you cant get variable this is not in the right scope (for example when you try to use variable outside of for loop, and the variable declaration was inside the for loop).
+
+        {
+            var x = 5; // not restricted to scope
+            let y = 10;// restricted to scope
+
+            // console.log(y);
+
+        }
+
+        console.log(x); //ok
+        console.log(y); //err
+    // 15/03/2021 rec02 00:53:27
+    </script>
+</body>
+</html>

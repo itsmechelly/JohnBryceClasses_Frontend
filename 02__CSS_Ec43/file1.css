@@ -29,6 +29,7 @@ div {
   bottom: 0;
   /* z-index: -1; */
 }
+
 .absolute {
   position: absolute;
   background-color: palegreen;
@@ -36,6 +37,7 @@ div {
   top: 20%;
   /* z-index: -1; */
 }
+
 .absolute2 {
   position: absolute;
   background-color: red;

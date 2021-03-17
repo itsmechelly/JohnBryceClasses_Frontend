@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    <p id="piska">AAAAAA</p>
+    <script>
+        document.write("this is 'write()'");
+    </script>
+    <p id="piska2">BBBBBBBBB</p>
+
+    <script src="file1.js"></script>
+
+    <script>
+        //this is JavaScript comment
+        // window.document.getElementById("piska").innerHTML = "Hello JavaScript";
+        // 1st way to output:
+        document.getElementById("piska").innerHTML = "Hello JavaScript";
+        
+        //2nd way to output:
+        //not recommended
+        //but can use for testing...
+        document.write("<h3>this is a call to write function</h3>");
+        document.write("do not use 'write()' after the page loaded!!! it will overwrite everything!!!");
+
+        //3rd way to output:
+        window.alert("Hello Alert popup: click F12 to show console");
+
+        //4th way to output:
+        console.log("this is log - it will show on the console");
+
+    </script>
+
+
+</body>
+</html>

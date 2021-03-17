@@ -1,0 +1,1 @@
+document.getElementById("piska2").innerHTML = "Hello JavaScript 2";
