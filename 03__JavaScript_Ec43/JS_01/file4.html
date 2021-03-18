@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>JS Demo</h1>
+
+    <script>
+
+        // decelerations:
+
+        var x;
+        console.log(x); // initialized as undefined, wil output "undefined"
+
+        x = 5;
+        console.log(x);
+
+        x = "aaa";
+        console.log(x);
+
+        var x; // redeclare (x is not changed)
+        console.log(x);
+
+        // operators:
+
+        let a = 3, b = 5;
+        let sum = a + b;
+
+        // power operator that is not exist in java:
+        let n1 = 3;
+        let n2 = n1 ** 3;
+        console.log(n1 + " ^ 3 = " + n2);
+
+        // ==
+        console.log(5 == 5); //true
+        console.log(5 == "5"); //true
+        console.log(5 === "5"); //false -> equals by value *and* type
+
+        console.log(5 != 5); //false
+        console.log(5 != "5"); //false
+        console.log(5 !== "5"); //true different by value *and* type
+
+        // logical operators: AND, OR, NOT
+        console.log(!(5 == 5 && 4 == 4) || 3 < 4); //true
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>JS Demo</h1>
+
+    <script>
+
+        //define a function
+        function sum(a, b){
+            var x = Number(a) + Number(b);
+            return x;
+        }
+
+        //get the input
+        var a = prompt("enter first number");
+        var b = prompt("enter second number");
+
+        //invoke function
+        var theSum = sum(a, b);
+        alert(theSum);
+
+        // //define a function -> with unary + operator
+        // function sum(a, b){
+        //     var x = a + b;
+        //     return x;
+        // }
+
+        // //get the input
+        // var a = +prompt("enter first number");
+        // var b = +prompt("enter second number");
+
+        // //invoke function
+        // var theSum = sum(a, b);
+        // alert(theSum);
+
+        //about the unary + operator (attempts to convert any value to number)
+        // console.log(typeof "5"); //string
+        // console.log(typeof +"5"); //number
+
+    </script>
+
+</body>
+</html>

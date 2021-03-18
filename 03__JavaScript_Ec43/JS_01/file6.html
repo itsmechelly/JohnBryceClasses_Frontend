@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>JS Demo</h1>
+
+    <script>
+
+        //define object
+
+        var person = {
+            id: 101,
+            name: "Ron",
+            age: 25,
+            getData: function () {
+                return ("[person= id=" + this.id
+                    + ", name=" + this.name
+                    + ", age=" + this.age
+                    + "]"
+                );
+            },
+            //you can override toString:
+            toString: function (){
+            return this.getData();
+            }
+        };
+
+        console.log(person);
+        console.log(person.getData);
+        console.log(person.getData()); //[person= id=101, name=Ron, age=25]
+        console.log(person.toString()); // without the override function -> [object Object]
+        console.log(person.toString()); // with the override function -> [person= id=101, name=Ron, age=25]
+
+        console.log("---------------------------");
+        
+        //recreance to the function
+        let x = person.getData;
+        console.log(typeof x); //function
+        
+        console.log("---------------------------");
+
+        //add object fields can be dynamically
+        person.address = "Tel Aviv";
+        console.log(person);
+        console.log(person.name); //Ron
+        console.log(person.stam); //undefine
+
+    </script>
+</body>
+
+</html>

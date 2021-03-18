@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>JS Demo</h1>
+
+    <script>
+
+        /*
+        
+        primitive types:
+        string
+        number
+        boolean
+        undefined
+
+        complex types:
+        object
+        function
+
+        */
+
+        console.log("-----------------------");
+
+        //type of:
+
+        console.log(typeof 5); //number
+        console.log(typeof "5"); //string
+
+        //instance of:
+
+        var date = new Date();
+        console.log(date); //Thu Mar 18 2021 11:24:58 GMT+0200 (Israel Standard Time)
+        console.log(typeof date); //object
+        console.log(date instanceof Date); //true
+        console.log(date instanceof String); //false
+
+        console.log("-----------------------");
+        
+        // variable type is dynamic
+        
+        var x; //undefined
+        console.log(x);
+        
+        x = 5; //number
+        console.log(x);
+        x = 5.3; //number
+        console.log(x);
+        
+        x = true; //boolean
+        console.log(x);
+        
+        x = "aaa"; //string
+        console.log(x);
+        
+        console.log("-----------------------");
+        
+        x = new Date();
+        console.log(x);
+        x = new Date(2020, 0); //January is 0
+        console.log(x);
+        x = new Date(2020, 0, 25); //January is 0
+        console.log(x);
+        x = new Date("1985-01-15"); //January is 1
+        console.log(x);
+        
+        console.log("-----------------------");
+        
+        x = {}; //object
+        console.log(x);
+        x = {
+            id: 101,
+            name: "Dan"
+        }; //object
+        console.log(x);
+        
+        console.log("-----------------------");
+        
+        var a = undefined;
+        var b = null;
+
+        console.log(a); //undefined
+        console.log(b); //null
+        console.log(a==b); //true
+        console.log(a===b); //false
+        
+        </script>
+
+</body>
+
+</html>
