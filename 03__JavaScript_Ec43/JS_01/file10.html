@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>class</h1>
+
+    <script>
+
+        //define a class
+        class Person{
+
+            //ctor
+            constructor(id, name, age){
+                this.id=id;
+                this.name=name;
+                this.age=age;
+            }
+
+            //method
+            speak(){
+                console.log("bla");
+            }
+        }
+
+        //define a sub class
+        class Employee extends Person{
+            
+            speak(){
+                console.log("bla bli blu");
+            }
+        }
+
+        let p1 = new Person(101, "Avi", 33);
+        console.log(p1);
+        p1.speak();
+        
+        let e1 = new Employee();
+        console.log(e1);
+        e1.speak();
+
+    </script>
+
+</body>
+</html>

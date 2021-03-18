@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body onload="afterPageLoaded()">
+    
+    <h1> JS Demo - Events</h1>
+    
+    <Button onClick="f1()">Click</Button>
+
+    <hr>
+    <input type="text" onchange="key()">
+    <input type="text" onkeypress="key()">
+    <input type="text" oninput="key()">
+    <input id="in" type="text" onkeydown="down()" onkeyup="up()">
+
+    <script>
+        function f1(params){
+            alert("clicked");
+            //document.write("AAA"); //will override the hole content, not recommended to use
+        }
+        
+        function afterPageLoaded(){
+            console.log("page loaded");
+        }
+        
+        function key(){
+            console.log("event");
+        }
+        
+        function down(){
+            console.log("key down");
+            console.log(document.getElementById("in").value);
+        }
+        
+        function up(){
+            console.log("key up");
+        }
+
+
+
+    </script>
+
+</body>
+</html>
