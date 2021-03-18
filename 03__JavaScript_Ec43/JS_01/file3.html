@@ -15,15 +15,20 @@
 
         {
             var x = 5; // not restricted to scope
-            let y = 10;// restricted to scope
-
-            // console.log(y);
+            let y = 10; // restricted to scope
+            const z = 100; // constant(like final in java) + restricted to scope
+            // z = 10; //err
+            
+            console.log(x); // ok
+            console.log(y); // ok
+            console.log(z); // ok
 
         }
 
         console.log(x); //ok
-        console.log(y); //err
-    // 15/03/2021 rec02 00:53:27
+        //console.log(y); //err
+        //console.log(z); //err
+
     </script>
 </body>
 </html>
