@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Javascript Demo</h1>
+    <h1>Shift Function</h1>
+    <h1>Un Shift Function</h1>
+
+    <script>
+
+        var arr = ["red", "green", "blue"];
+        console.log(arr.toString());
+        // use shift to remove first element.
+        //shift will remove first element and returns it.
+        console.log(arr.shift());
+        console.log(arr.toString());
+
+        //unshift will add one or more elements to the beginning of the array.
+        //and will return the new length.
+        let arrNewLength = arr.unshift("black");
+        console.log(arrNewLength);
+        console.log(arr.toString());
+
+    </script>
+
+
+</body>
+</html>
