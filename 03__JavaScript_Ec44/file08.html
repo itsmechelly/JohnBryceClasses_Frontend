@@ -12,8 +12,8 @@
 
     <h1>Errors</h1>
 
-    <div id="content" style="background-color: green;"></div>
-    <div id="error" style="background-color: red;"></div>
+    <div style="background-color: green" id="content"></div>
+    <div style="background-color: red" id="error"></div>
 
     <script>
 
@@ -27,14 +27,34 @@
                 if (age >= 0 && age <= 120) {
                     this.age = age;
                 } else {
-                    let arr = new Error("the age " + age + "is out of range.");
-                    err.name = "personAgeError";
-                    throw err;
+
+                    // === option 1 - use JS built in Error
+                    // let err = new Error("the age " + age + " is out of range.");
+                    // err.name = "personAgeError";
+                    // throw err;
+
+                    
+                    // === option 2 - use our custom Error
+                    throw new AgeError("the age " + age + " is out of range.");
+                    
+                    // === option 3 - throw any type of error (string, number, etc...
+                    // any type can be thrown (as error).
+                    // not so recommended to use.
+                    // throw "the age " + age + " is out of range.";
+
                 }
             }
 
-            toString(){
-                return "Person[name="+this.name+", age="+this.age+"]";
+            toString() {
+                return "Person[name=" + this.name + ", age=" + this.age + "]";
+            }
+        }
+
+        // our own defined error
+        class AgeError extends Error {
+            constructor(message) {
+                super(message);
+                this.name = "AgeError";
             }
         }
 
@@ -43,9 +63,12 @@
             console.log(p);
             p.setAge(2500);
             console.log(p);
-            document.getElementById("content").innerHTML=p;
+            document.getElementById("content").innerHTML = p;
         } catch (error) {
-            document.getElementById("error").innerHTML=error.message;
+            document.getElementById("error").innerHTML = error.message;
+            console.dir(error);
+            //if yuy throw string instead of error, do this:
+            // document.getElementById("error").innerHTML=error;
         }
 
     </script>
