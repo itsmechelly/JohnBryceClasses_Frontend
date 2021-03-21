@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Array</h1>
+
+    <script>
+
+        let arr1 = [1,2,3];
+        let arr2 = [4,5,6];
+        let arr3 = arr1.concat(arr2);
+        //concatenate arrays
+        console.log(arr3.join(", "));
+        
+        //-----------------------------------
+        
+        let arr4 = [1,2,3];
+        let arr5 = [4,5,6];
+        let arr6 = [7,8,9];
+        arr6 = arr4.concat(arr5, arr6);
+        //concatenate arrays
+        console.log(arr6.join(", "));
+        
+        //-----------------------------------
+
+        //get a slice of an array
+        var arr7 = arr6.slice(2, 6);
+        console.log(arr7.join(", "));
+
+    </script>
+</body>
+</html>
