@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Filter method</h1>
+    <h1>Reduce method</h1>
+    <h1>Every method</h1>
+
+    <script>
+
+        var arr = [45, 4, 9, 16, 25];
+        var over18 = arr.filter(testFun);
+
+        //FILTER
+        //use filter to create a new arr with elements that pass a test.
+        function testFun(e, index, arr) {
+            return e > 18;
+        }
+
+        console.log(arr.toString());
+        console.log(over18.toString());
+
+        console.log("-----------------------------------");
+        
+        //REDUCE
+        var sum = arr.reduce(callBack);
+        console.log(sum);
+        
+        function callBack(total, e, index, arr) {
+            return total + e;
+        }
+        
+        console.log("-----------------------------------");
+
+        //REDUCE using arrow method
+        var newSum = arr.reduce((total, e, index, arr) => {return total + e});
+        console.log(newSum);
+
+        //EVERY
+        var age = 18;
+        var allOverAge = arr.every((e) => e > age);
+        console.log(arr);
+        console.log("are all elements over " + age + "? " + allOverAge);
+
+    </script>
+</body>
+
+</html>
