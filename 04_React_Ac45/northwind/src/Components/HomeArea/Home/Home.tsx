@@ -1,5 +1,7 @@
+import Bestseller from "../Bestseller/Bestseller";
 import Desserts from "../Desserts/Desserts";
 import Discount from "../Discount/Discount";
+import Recommended from "../Recommended/Recommended";
 import Sales from "../Sales/Sales";
 import Specials from "../Specials/Specials";
 import "./Home.css";
@@ -24,6 +26,11 @@ function Home(): JSX.Element {
             <Sales category="Fruits" percent={5}></Sales>
             <Sales percent={10}></Sales>
 
+            {/* Events */}
+            <Recommended></Recommended>
+
+            <Bestseller></Bestseller>
+            
         </div>
     );
 }
