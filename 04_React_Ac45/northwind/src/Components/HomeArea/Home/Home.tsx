@@ -1,3 +1,4 @@
+import Desserts from "../Desserts/Desserts";
 import Discount from "../Discount/Discount";
 import Specials from "../Specials/Specials";
 import "./Home.css";
@@ -13,6 +14,9 @@ function Home(): JSX.Element {
 
             {/* Conditional Rendering */}
             <Specials></Specials>
+
+            {/* Displaying Lists */}
+            <Desserts></Desserts>
 
         </div>
     );

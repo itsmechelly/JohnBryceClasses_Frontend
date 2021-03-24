@@ -2,7 +2,7 @@ import "./Specials.css";
 
 function Specials(): JSX.Element {
     return (
-        <div className="Specials">
+        <div className="Specials Box">
 
 			<p>Our Specials:</p>
             {isWeekend() ? <span>Pizza</span> : <span>Pasta</span>}
