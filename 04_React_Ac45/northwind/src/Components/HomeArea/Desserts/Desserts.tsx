@@ -2,13 +2,13 @@ import "./Desserts.css";
 
 function Desserts(): JSX.Element {
 
-    const items = ["Ice Cream", "Pavlova", "Eclair", "Apple Pie"];
+    const items = [{id: 1, name: "Ice Cream"}, {id: 2, name: "Pavlova"}, {id: 3, name: "Eclair"}, {id: 4, name: "Apple Pie"}];
 
     return (
         <div className="Desserts Box">
             <p>
-                Our Desserts:
-                { items.map(item => <span> {item} | </span>) }
+                Our Desserts: &nbsp;
+                { items.map(item => <span key={item.id}> {item.name} | </span>) }
             </p>
 			
         </div>
