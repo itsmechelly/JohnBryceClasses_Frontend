@@ -27,6 +27,7 @@ class Recommended extends Component {
     //     alert(this.item);
     // }
 
+    //we solved "this problem" with the 3rd way we learned with Assaf -> arrow function. 
     private showRecommendation = () => {
         alert(this.item);
     }
