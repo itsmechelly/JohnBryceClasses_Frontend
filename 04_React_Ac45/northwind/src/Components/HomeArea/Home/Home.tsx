@@ -24,7 +24,7 @@ function Home(): JSX.Element {
             {/* Props */}
             <Sales category="Beverages" percent={20}></Sales>
             <Sales category="Fruits" percent={5}></Sales>
-            <Sales percent={10}></Sales>
+            <Sales percent={10}></Sales> {/*Sales.tsx -> category?: string;  ? = optional argument*/}
 
             {/* Events */}
             <Recommended></Recommended>
