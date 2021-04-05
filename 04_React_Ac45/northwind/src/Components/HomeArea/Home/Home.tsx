@@ -1,4 +1,5 @@
 import Bestseller from "../Bestseller/Bestseller";
+import Clock from "../Clock/Clock";
 import Desserts from "../Desserts/Desserts";
 import Discount from "../Discount/Discount";
 import Recommended from "../Recommended/Recommended";
@@ -12,9 +13,9 @@ function Home(): JSX.Element {
         <div className="Home">
 
             <p>This is Home...</p>
-            
+
             {/* Interpolation */}
-			<Discount></Discount>
+            <Discount></Discount>
 
             {/* Conditional Rendering */}
             <Specials></Specials>
@@ -32,10 +33,12 @@ function Home(): JSX.Element {
 
             {/* State */}
             <Bestseller></Bestseller>
-            
+
             {/* Two Ways Binding */}
             <Search></Search>
 
+            {/* Lifecycle Hooks */}
+            <Clock></Clock>
         </div>
     );
 }

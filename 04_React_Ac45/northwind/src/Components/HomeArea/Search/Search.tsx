@@ -1,8 +1,8 @@
-import { Component } from "react";
+import { Component, SyntheticEvent } from "react";
 import "./Search.css";
 
 interface SearchState {
-	textToSearch: string;
+    textToSearch: string;
 }
 
 class Search extends Component<{}, SearchState> {
@@ -12,16 +12,36 @@ class Search extends Component<{}, SearchState> {
         this.state = { textToSearch: "" };
     }
 
-    private setValue = () => {
-        alert("test");
+    private setValue = (args: SyntheticEvent) => {
+        // args = information about the event
+        // args.target = the component that brought up the event
+
+        //ES6 Property Shortcut Syntax:
+        const textToSearch = (args.target as HTMLInputElement).value;
+        this.setState({ textToSearch })
+
+        // or the long way:
+        // const value = (args.target as HTMLInputElement).value;
+        // this.setState({ textToSearch: value })
     }
-    
+
+    private clearValue = () => {
+        this.setState({ textToSearch: "" });
+    }
+
     public render(): JSX.Element {
         return (
             <div className="Search Box">
-				<input type="text" placeholder="search something..."
-                    onChange={this.setValue}
-                />
+
+                <input type="text" placeholder="search something..."
+                    onChange={this.setValue} 
+                    value={this.state.textToSearch} />
+                <span> Searching for... {this.state.textToSearch}</span>
+
+                {/*  */}
+
+                <button onClick={this.clearValue}>Clear</button>
+
             </div>
         );
     }
