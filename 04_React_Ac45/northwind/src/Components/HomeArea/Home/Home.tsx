@@ -39,6 +39,7 @@ function Home(): JSX.Element {
 
             {/* Lifecycle Hooks */}
             <Clock></Clock>
+            
         </div>
     );
 }
