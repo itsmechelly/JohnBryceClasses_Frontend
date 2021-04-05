@@ -1,3 +1,4 @@
+import ContactUs from "../../ContactUsArea/ContactUs/ContactUs";
 import Home from "../../HomeArea/Home/Home";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
@@ -17,7 +18,8 @@ function Layout(): JSX.Element { //JSX.Element = the component UI
             </aside>
 
             <main>
-                <Home></Home>
+                {/* <Home></Home> */}
+                <ContactUs></ContactUs>
             </main>
 
             <footer>
