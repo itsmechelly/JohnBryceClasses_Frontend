@@ -35,11 +35,11 @@ class Search extends Component<{}, SearchState> {
 
                 <input type="text" placeholder="search something..."
                     onChange={this.setValue} 
+                    // the value set here below is to set info from the variable to the user
                     value={this.state.textToSearch} />
                 <span> Searching for... {this.state.textToSearch}</span>
 
                 {/*  */}
-
                 <button onClick={this.clearValue}>Clear</button>
 
             </div>
