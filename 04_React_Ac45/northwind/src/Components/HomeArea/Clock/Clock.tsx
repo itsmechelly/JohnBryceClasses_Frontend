@@ -27,7 +27,7 @@ class Clock extends Component<{}, ClockState> {
         }, 1000);
     }
 
-    // 3rd render UI needs to be updated (basiclly this one runs before thr 2nd wroten here above)
+    // 3rd render UI needs to be updated (basically this one runs before thr 2nd wroten here above)
     // usage: return back the component UI
     public render(): JSX.Element {
         return (
