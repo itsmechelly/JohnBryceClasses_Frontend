@@ -9,7 +9,7 @@ class Clock extends Component<{}, ClockState> {
 
     // Timer code -> used for closing the timer in componentWillUnmount()
     // when you use some object that has something "continues..."/ listening to events
-    private timerId: number = 0;
+    private timerId: number;
 
     // 1st Lifecycle Hooks -> react creates an object from this class
     //usage: init state, send props to super class
