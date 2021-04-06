@@ -16,7 +16,7 @@ class Search extends Component<{}, SearchState> {
         // args = information about the event
         // args.target = the component that brought up the event
 
-        //ES6 Property Shortcut Syntax:
+        //ES6 Property Shorthand Syntax:
         const textToSearch = (args.target as HTMLInputElement).value;
         this.setState({ textToSearch })
 
@@ -36,6 +36,7 @@ class Search extends Component<{}, SearchState> {
                 <input type="text" placeholder="search something..."
                     onChange={this.setValue} 
                     // the value set here below is to set info from the variable to the user
+                    //here we actually make the input to be listener to the value of the state
                     value={this.state.textToSearch} />
                 <span> Searching for... {this.state.textToSearch}</span>
 
