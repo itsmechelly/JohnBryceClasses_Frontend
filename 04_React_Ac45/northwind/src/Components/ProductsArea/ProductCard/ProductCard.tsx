@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import ProductModel from "../../../Models/ProductModel";
+import globals from "../../../Services/Globals";
 import "./ProductCard.css";
 
 interface ProductCardProps {
@@ -16,7 +17,8 @@ function ProductCard(props: ProductCardProps): JSX.Element {
             </div>
             <div>
                 <NavLink to={"/products/details/" + props.product.id}>
-                    <img src={"http://localhost:3030/api/products/images/" + props.product.imageName} />
+                    {/* <img src={"http://localhost:3030/api/products/images/" + props.product.imageName} /> */}
+                    <img src={globals.urls.productsImages + props.product.imageName} />
                 </NavLink>
             </div>
         </div>

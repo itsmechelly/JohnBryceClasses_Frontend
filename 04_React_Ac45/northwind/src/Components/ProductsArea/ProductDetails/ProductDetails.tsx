@@ -1,8 +1,10 @@
 import axios from "axios";
 import { Component, Fragment } from "react";
 import { RouteComponentProps } from "react-router";
+import { NavLink } from "react-router-dom";
 import { resolveProjectReferencePath } from "typescript";
 import ProductModel from "../../../Models/ProductModel";
+import globals from "../../../Services/Globals";
 import "./ProductDetails.css";
 
 //this tells us the params we need for the link 
@@ -30,7 +32,8 @@ class ProductDetails extends Component<ProductDetailsProps, ProductDetailsState>
     public async componentDidMount() {
         try {
             const id = this.props.match.params.id;
-            const response = await axios.get<ProductModel>("http://localhost:3030/api/products/" + id);
+            // const response = await axios.get<ProductModel>("http://localhost:3030/api/products/" + id);
+            const response = await axios.get<ProductModel>(globals.urls.products + id);
             this.setState({ product: response.data })
         }
         catch (err) {
@@ -44,13 +47,20 @@ class ProductDetails extends Component<ProductDetailsProps, ProductDetailsState>
 
                 {/* we do these bellow as conditional rendering - otherwise it's null */}
                 {this.state.product &&
-                    <Fragment>
+                    // <Fragment>
+                    <>
                         <h2>Product Details</h2>
                         <h3>Name: {this.state.product.name}</h3>
                         <h3>Price: ${this.state.product.price}</h3>
                         <h3>Stock: {this.state.product.stock}</h3>
-                        <img src={"http://localhost:3030/api/products/images/" + this.state.product.imageName} />
-                    </Fragment>
+                        {/* <img src={"http://localhost:3030/api/products/images/" + this.state.product.imageName} /> */}
+                        <img src={globals.urls.productsImages + this.state.product.imageName} />
+                        <br />
+                        <br />
+
+                        <NavLink to="/products">Back</NavLink>
+                    </>
+                    // </Fragment>
                 }
             </div>
         );

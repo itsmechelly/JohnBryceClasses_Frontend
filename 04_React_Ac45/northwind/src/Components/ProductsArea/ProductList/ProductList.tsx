@@ -1,6 +1,7 @@
 import axios from "axios";
 import { Component } from "react";
 import ProductModel from "../../../Models/ProductModel";
+import globals from "../../../Services/Globals";
 import ProductCard from "../ProductCard/ProductCard";
 import "./ProductList.css";
 
@@ -17,7 +18,8 @@ class ProductList extends Component<{}, ProductListState> {
 
     public async componentDidMount() {
         try {
-            const response = await axios.get<ProductModel[]>("http://localhost:3030/api/products");//הפקודה הזו תמתין אך הדפדפן לא יתקע
+            // const response = await axios.get<ProductModel[]>("http://localhost:3030/api/products");//הפקודה הזו תמתין אך הדפדפן לא יתקע
+            const response = await axios.get<ProductModel[]>(globals.urls.products);//הפקודה הזו תמתין אך הדפדפן לא יתקע
             this.setState({ products: response.data });
         } catch (err) {
             alert("Error: " + err.message);
