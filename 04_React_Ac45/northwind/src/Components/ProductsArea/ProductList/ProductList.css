@@ -1,3 +1,9 @@
 .ProductList {
-	
+	overflow: auto;
+    height: 400px;
+    padding-top: 20px;
+}
+
+.ProductList {
+    text-align: left;
 }
