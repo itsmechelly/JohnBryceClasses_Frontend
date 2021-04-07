@@ -18,7 +18,6 @@ class ProductList extends Component<{}, ProductListState> {
      {
         const response = await axios.get<ProductModel[]>("http://localhost:3030/api/products");//הפקודה הזו תמתין אך הדפדפן לא יתקע
         this.setState({products: response.data});
-        console.log(response.data);
     }
 
     public render(): JSX.Element {
