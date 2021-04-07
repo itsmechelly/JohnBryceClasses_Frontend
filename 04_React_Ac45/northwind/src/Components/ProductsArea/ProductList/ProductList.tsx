@@ -1,5 +1,7 @@
+import { AddBox } from "@material-ui/icons";
 import axios from "axios";
 import { Component } from "react";
+import { NavLink } from "react-router-dom";
 import ProductModel from "../../../Models/ProductModel";
 import globals from "../../../Services/Globals";
 import ProductCard from "../ProductCard/ProductCard";
@@ -30,10 +32,12 @@ class ProductList extends Component<{}, ProductListState> {
     public render(): JSX.Element {
         return (
             <div className="ProductList">
-
-                <h2>Here are our {this.state.products.length}</h2>
                 
-                    {this.state.products.map(p => <ProductCard key={p.id} product={p} />)}
+                <NavLink to="/products/new" exact>
+                    <AddBox />
+                </NavLink>
+                
+                {this.state.products.map(p => <ProductCard key={p.id} product={p} />)}
 
             </div>
         );
