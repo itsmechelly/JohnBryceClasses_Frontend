@@ -1,6 +1,7 @@
 import axios from "axios";
 import { Component } from "react";
 import ProductModel from "../../../Models/ProductModel";
+import ProductCard from "../ProductCard/ProductCard";
 import "./ProductList.css";
 
 interface ProductListState {
@@ -30,9 +31,7 @@ class ProductList extends Component<{}, ProductListState> {
 
                 <h2>Here are our {this.state.products.length}</h2>
                 
-                <ul>
-                    {this.state.products.map(p => <li key={p.id}>{p.name} - ${p.price}</li>)}
-                </ul>
+                    {this.state.products.map(p => <ProductCard key={p.id} product={p} />)}
 
             </div>
         );

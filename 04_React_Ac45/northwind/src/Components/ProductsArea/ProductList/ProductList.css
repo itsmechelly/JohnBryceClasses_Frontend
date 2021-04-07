@@ -1,9 +1,9 @@
 .ProductList {
 	overflow: auto;
-    height: 400px;
+    height: 70vh;
     padding-top: 20px;
 }
 
-.ProductList {
+.ProductList > ul {
     text-align: left;
 }
