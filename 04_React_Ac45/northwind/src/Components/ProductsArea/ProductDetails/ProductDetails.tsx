@@ -28,7 +28,7 @@ class ProductDetails extends Component<ProductDetailsProps, ProductDetailsState>
     }
 
     //we add this and give it the param id
-    //we can see the id in the F12
+    //we can see the id in the aspect
     public async componentDidMount() {
         try {
             const id = this.props.match.params.id;
