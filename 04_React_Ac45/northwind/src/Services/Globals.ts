@@ -7,6 +7,7 @@ class Globals {
 class DevelopmentGlobals extends Globals{
     public urls = {
       products: "http://localhost:3030/api/products/",
+    //   productsDelayed: "http://localhost:3030/api/products/delayed/",
       productsImages: "http://localhost:3030/api/products/images/"
     };
 }
@@ -19,7 +20,7 @@ class ProductionGlobals extends Globals{
       };
 }
 
-//Creating the corrent object
+//Creating the current object
 const globals = process.env.NODE_ENV === "development" ? new DevelopmentGlobals(): new ProductionGlobals();
 
 export default globals;

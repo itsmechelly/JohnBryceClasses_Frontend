@@ -2,6 +2,8 @@ import axios from "axios";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router";
 import ProductModel from "../../../Models/ProductModel";
+import { ProductAddedAction } from "../../../Redux/ProductsState";
+import store from "../../../Redux/Store";
 import globals from "../../../Services/Globals";
 import "./AddProduct.css";
 
@@ -24,11 +26,17 @@ function AddProduct(): JSX.Element {
             myFormData.append("stock", product.stock.toString());
             myFormData.append("image", product.image.item(0));
 
+    // -----------------------------------------------------------------------------------------------------
+    
             const response = await axios.post<ProductModel>(globals.urls.products, myFormData);
             const addedProduct = response.data;
-            alert("Product has been added! id: " + addedProduct.id);
 
+            //With Redux:
+            store.dispatch(ProductAddedAction(addedProduct));
+
+            alert("Product has been added! id: " + addedProduct.id);
             history.push("/products");
+
         } catch (error) {
             alert("Error...");
         }

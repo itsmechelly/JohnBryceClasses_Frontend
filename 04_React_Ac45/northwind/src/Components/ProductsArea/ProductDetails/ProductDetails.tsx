@@ -4,6 +4,7 @@ import { RouteComponentProps } from "react-router";
 import { NavLink } from "react-router-dom";
 import { resolveProjectReferencePath } from "typescript";
 import ProductModel from "../../../Models/ProductModel";
+import store from "../../../Redux/Store";
 import globals from "../../../Services/Globals";
 import "./ProductDetails.css";
 
@@ -24,22 +25,47 @@ class ProductDetails extends Component<ProductDetailsProps, ProductDetailsState>
 
     public constructor(props: ProductDetailsProps) {
         super(props);
+        //The first code in this matter -> without Redux:
         this.state = { product: null };
+        //The second code in this matter -> with Redux:
+
     }
+
+    // -----------------------------------------------------------------------------------------------------
+
+    //The first code in this matter -> without Redux:
 
     //we add this and give it the param id
     //we can see the id in the aspect
+
+    // public async componentDidMount() {
+    //     try {
+    //         const id = this.props.match.params.id;
+    //         // const response = await axios.get<ProductModel>("http://localhost:3030/api/products/" + id);
+    //         const response = await axios.get<ProductModel>(globals.urls.products + id);
+    //         this.setState({ product: response.data })
+    //     }
+    //     catch (err) {
+    //         alert("error: " + err.message);
+    //     }
+    // }
+
+    // -----------------------------------------------------------------------------------------------------
+
+    //The second code in this matter -> with Redux:
+
     public async componentDidMount() {
         try {
-            const id = this.props.match.params.id;
-            // const response = await axios.get<ProductModel>("http://localhost:3030/api/products/" + id);
-            const response = await axios.get<ProductModel>(globals.urls.products + id);
-            this.setState({ product: response.data })
+            const id = +this.props.match.params.id;
+            const product = store.getState().ProductsState.products.find(p => p.id === id);
+            this.setState({ product })
         }
         catch (err) {
             alert("error: " + err.message);
         }
     }
+
+    // -----------------------------------------------------------------------------------------------------
 
     public render(): JSX.Element {
         return (
