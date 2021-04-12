@@ -5,6 +5,7 @@ import ProductModel from "../../../Models/ProductModel";
 import { ProductAddedAction } from "../../../Redux/ProductsState";
 import store from "../../../Redux/Store";
 import globals from "../../../Services/Globals";
+import notify from "../../../Services/Notification";
 import "./AddProduct.css";
 
 function AddProduct(): JSX.Element {
@@ -38,7 +39,8 @@ function AddProduct(): JSX.Element {
             history.push("/products");
 
         } catch (error) {
-            alert("Error...");
+            // alert("Error...");
+            notify.error("Error adding a product!");
         }
     }
 
