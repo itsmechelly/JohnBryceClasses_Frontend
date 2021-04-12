@@ -6,3 +6,9 @@
 .AddProduct button {
     margin: 10px 0;
 }
+
+.AddProduct span {
+    color: red;
+    margin: 0 20px;
+    position: absolute;
+}
