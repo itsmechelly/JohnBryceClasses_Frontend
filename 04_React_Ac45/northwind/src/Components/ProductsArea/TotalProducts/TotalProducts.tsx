@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { Unsubscribe } from "redux";
 import store from "../../../Redux/Store";
 import "./TotalProducts.css";
 
@@ -8,14 +9,18 @@ interface TotalProductsState {
 
 class TotalProducts extends Component<{}, TotalProductsState> {
 
+    //Function which will unsubscribe from the subscribe operator:
+    private unsubscribeMe: Unsubscribe;
+
     public constructor(props: {}) {
         super(props);
         this.state = {count: 0 };
     }
 
     public componentDidMount(): void {
-        store.subscribe(()=>{
-            this.setState({count: store.getState().ProductsState.products.length});
+        // On any AppState change - call this function:
+        this.unsubscribeMe = store.subscribe(() => {
+            this.setState({ count: store.getState().ProductsState.products.length });
         });
     }
 
@@ -26,6 +31,11 @@ class TotalProducts extends Component<{}, TotalProductsState> {
             </div>
         );
     }
+
+    public componentWillUnmount(): void {
+        this.unsubscribeMe(); // Unsubscribe from the subscribe operation.
+    }
+    
 }
 
 export default TotalProducts;

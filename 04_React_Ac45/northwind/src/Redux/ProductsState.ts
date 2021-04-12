@@ -17,10 +17,10 @@ export enum ProductsActionType {
     // UpdateProduct,
     // DeleteProduct
 
-    ProductDownloaded,
-    ProductAdded,
-    ProductUpdated,
-    ProductDeleted
+    ProductDownloaded = "ProductDownloaded",
+    ProductAdded = "ProductAdded",
+    ProductUpdated = "ProductUpdated",
+    ProductDeleted = "ProductDeleted"
 }
 
 // -------------------------------------------------------------------------------------------
@@ -58,7 +58,7 @@ export function ProductDeletedAction(id: number): ProductAction {
         // const newState = new ProductsState();
         // newState.products = currentState.products;
 
-        const newState = {...currentState}; // Spread Operator - שכפול אובייקטק
+        const newState = {...currentState}; // Spread Operator -שכפול אובייקטק
 
         switch(action.type) {
             case ProductsActionType.ProductDownloaded:
