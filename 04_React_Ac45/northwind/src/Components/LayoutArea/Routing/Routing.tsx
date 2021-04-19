@@ -1,5 +1,6 @@
 import { Redirect, Route, Switch } from "react-router";
 import About from "../../AboutArea/About/About";
+import Register from "../../AuthArea/Register/Register";
 import ContactUs from "../../ContactUsArea/ContactUs/ContactUs";
 import Home from "../../HomeArea/Home/Home";
 import AddProduct from "../../ProductsArea/AddProduct/AddProduct";
@@ -17,6 +18,11 @@ function Routing(): JSX.Element {
             <Route path="/products/details/:id" component = {ProductDetails} exact />
             <Route path="/products/new/" component = {AddProduct} exact />
             <Route path="/about" component = {About} exact />
+
+
+            <Route path="/register" component = {Register} exact />
+
+
             <Route path="/contact-us" component = {ContactUs} exact />
             <Route component = {Page404}           />
         </Switch>
