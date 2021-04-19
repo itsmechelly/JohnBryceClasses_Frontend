@@ -1,10 +1,12 @@
 import axios from "axios";
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 import ProductModel from "../../../Models/ProductModel";
 import { ProductAddedAction } from "../../../Redux/ProductsState";
 import store from "../../../Redux/Store";
 import globals from "../../../Services/Globals";
+import jwtAxios from "../../../Services/jwtAxios";
 import notify from "../../../Services/Notification";
 import "./AddProduct.css";
 
@@ -12,6 +14,17 @@ function AddProduct(): JSX.Element {
 
     const { register, handleSubmit, errors } = useForm<ProductModel>();
     const history = useHistory();
+
+    //useVerifyLoggedIn(); //If you want to add HOOK from yourself! like in Assaf's backend.
+
+    //componentDidMount for FC:
+    useEffect(() => {
+        //If we don't have user object - we are not logged in:
+        if (!store.getState().AuthState.user) {
+            notify.error("Please log in for adding a product!");
+            history.push("/login");
+        }
+    });
 
     async function send(product: ProductModel) {
         try {
@@ -23,7 +36,12 @@ function AddProduct(): JSX.Element {
             myFormData.append("stock", product.stock.toString());
             myFormData.append("image", product.image.item(0));
 
-            const response = await axios.post<ProductModel>(globals.urls.products, myFormData);
+            //Sending JWT Token without interceptors:
+            // const headers = { "authorization": "Bearer " + store.getState().AuthState.user.token };
+            // const response = await axios.post<ProductModel>(globals.urls.products, myFormData, { headers });
+            
+            //Sending JWT Token with interceptors:
+            const response = await jwtAxios.post<ProductModel>(globals.urls.products, myFormData);
             const addedProduct = response.data;
 
             // With Redux:

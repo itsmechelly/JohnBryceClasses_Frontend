@@ -1,3 +1,4 @@
+import { authReducer, AuthState } from './AuthState';
 import { combineReducers, createStore } from "redux";
 import { productsReducer } from "./ProductsState";
 
@@ -12,7 +13,7 @@ import { productsReducer } from "./ProductsState";
 // -----------------------------------------------------------------------------------------------------
 
 //For Multiple Reducers:
-const reducers = combineReducers({ ProductsState: productsReducer/*, EmployeesState: employeesReducer, CustomerState: customerReducer*/});
+const reducers = combineReducers({ ProductsState: productsReducer, AuthState: authReducer/*, EmployeesState: employeesReducer, CustomerState: customerReducer*/});
 const store = createStore(reducers);
 
 // -----------------------------------------------------------------------------------------------------

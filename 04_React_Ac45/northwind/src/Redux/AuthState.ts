@@ -50,7 +50,7 @@ export function authReducer(currentState: AuthState = new AuthState(), action: A
         case AuthActionType.Login: //Here the payload is the logged in user sent from the server.
             newState.user = action.payload;
             break;
-        case AuthActionType.Logout: //Here we dont have payload!
+        case AuthActionType.Logout: //Here we don't have payload!
             newState.user = null;
             break;
     }
