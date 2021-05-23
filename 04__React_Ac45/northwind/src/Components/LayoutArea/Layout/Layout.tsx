@@ -1,6 +1,7 @@
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import Menu from "../Menu/Menu";
+import Routing from "../Routing/Routing";
 import "./Layout.css";
 
 function Layout(): JSX.Element { //JSX.Element = The component UI
@@ -13,7 +14,9 @@ function Layout(): JSX.Element { //JSX.Element = The component UI
             <aside>
                 <Menu/>
             </aside>
-            <main>3</main>
+            <main>
+                <Routing/>
+            </main>
             <footer>
                 <Footer/>
             </footer>
