@@ -1,3 +1,4 @@
+import Home from "../../HomeArea/Home/Home";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import Menu from "../Menu/Menu";
@@ -15,7 +16,8 @@ function Layout(): JSX.Element { //JSX.Element = The component UI
                 <Menu/>
             </aside>
             <main>
-                <Routing/>
+                <Home/>
+                {/* <Routing/> */}
             </main>
             <footer>
                 <Footer/>
