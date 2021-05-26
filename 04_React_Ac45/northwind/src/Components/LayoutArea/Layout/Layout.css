@@ -10,10 +10,10 @@
     grid-column: span 6;
 }
 
-.Layout > main{
+.Layout > main {
     grid-column: span 5;
 }
 
-.Layout, .Layout > *{
+.Layout, .Layout > * {
     border: 1px solid black;
 }
