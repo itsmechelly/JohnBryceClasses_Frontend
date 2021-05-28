@@ -26,7 +26,6 @@ myButton3.addEventListener("click", function () {
     }.bind(this), 3000);
 });
 
-
 const myButton4 = document.getElementById("myButton4");
 myButton4.addEventListener("click", function () {
     setTimeout(() => {
