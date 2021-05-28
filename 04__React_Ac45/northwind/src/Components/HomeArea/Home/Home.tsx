@@ -1,5 +1,6 @@
 import Desserts from "../Desserts/Desserts";
 import Discount from "../Discount/Discount";
+import Sales from "../Sales/Sales";
 import Specials from "../Specials/Specials";
 import "./Home.css";
 
@@ -8,12 +9,15 @@ function Home(): JSX.Element {
         <div className="Home">
 
             {/* Interpolation: */}
-            <Discount/>
+            <Discount />
             {/* Conditional Rendering */}
-            <Specials/>
+            <Specials />
             {/* Displaying Lists */}
-            <Desserts/>
-
+            <Desserts />
+            {/* Props */}
+            <Sales category="Beverages" percent={20} />
+            <Sales category="Fruits" percent={5} />
+            <Sales percent={10} />
         </div>
     );
 }
