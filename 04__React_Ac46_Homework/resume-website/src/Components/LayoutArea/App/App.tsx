@@ -5,7 +5,7 @@ import "./App.css";
 
 function App(): JSX.Element {
     return (
-        <div className="Apkp">
+        <div className="App">
             <header>
                 <Header />
             </header>
