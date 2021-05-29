@@ -11,6 +11,7 @@ myButton1.addEventListener("click", function () {
 
 // this & that: 
 const myButton2 = document.getElementById("myButton2");
+
 myButton2.addEventListener("click", function () {
     const that = this; // me, _this, thiz, self, that
     setTimeout(function () {
