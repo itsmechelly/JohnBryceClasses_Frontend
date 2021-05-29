@@ -5,16 +5,16 @@ function test() {
     doSomething3(function (a, b) { return a + b; })
 }
 function test() {
-    doSomething1( () => { alert("Hi"); });
-    doSomething2( (a) => { alert(a); });
-    doSomething2( (a, b) => { alert(a + b); });
-    doSomething3( (a, b) => { return a + b; })
+    doSomething1(() => { alert("Hi"); });
+    doSomething2((a) => { alert(a); });
+    doSomething2((a, b) => { alert(a + b); });
+    doSomething3((a, b) => { return a + b; })
 }
 function test() {
-    doSomething1( () => alert("Hi"));
-    doSomething2( a => alert(a));
-    doSomething2( (a, b) => alert(a + b));
-    doSomething3( (a, b) => a + b);
+    doSomething1(() => alert("Hi"));
+    doSomething2(a => alert(a));
+    doSomething2((a, b) => alert(a + b));
+    doSomething3((a, b) => a + b);
 }
 
 function doSomething1(callback) {
