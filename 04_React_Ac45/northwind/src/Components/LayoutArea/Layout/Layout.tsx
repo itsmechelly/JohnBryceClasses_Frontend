@@ -28,7 +28,6 @@ function Layout(): JSX.Element { //JSX.Element = the component UI
             <footer>
                 <Footer />
             </footer>
-
         </div>
         </BrowserRouter>
     );

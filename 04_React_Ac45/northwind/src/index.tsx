@@ -5,10 +5,10 @@ import reportWebVitals from './reportWebVitals';
 import Layout from './Components/LayoutArea/Layout/Layout';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Layout/>
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <Layout />
+    </React.StrictMode>,
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
