@@ -3,6 +3,7 @@ import Desserts from "../Desserts/Desserts";
 import Discount from "../Discount/Discount";
 import Recommended from "../Recommended/Recommended";
 import Sales from "../Sales/Sales";
+import Search from "../Search/Search";
 import Specials from "../Specials/Specials";
 import "./Home.css";
 
@@ -31,7 +32,7 @@ function Home(): JSX.Element {
             <Bestseller />
 
             {/* Two Ways Binding */}
-            {/* <Search></Search> */}
+            <Search></Search>
 
             {/* Lifecycle Hooks */}
             {/* <Clock></Clock> */}
