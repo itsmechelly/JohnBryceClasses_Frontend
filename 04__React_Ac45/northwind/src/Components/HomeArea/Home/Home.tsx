@@ -1,4 +1,5 @@
 import Bestseller from "../Bestseller/Bestseller";
+import Clock from "../Clock/Clock";
 import Desserts from "../Desserts/Desserts";
 import Discount from "../Discount/Discount";
 import Recommended from "../Recommended/Recommended";
@@ -32,10 +33,10 @@ function Home(): JSX.Element {
             <Bestseller />
 
             {/* Two Ways Binding */}
-            <Search></Search>
+            <Search />
 
             {/* Lifecycle Hooks */}
-            {/* <Clock></Clock> */}
+            <Clock />
 
         </div>
     );
