@@ -6,3 +6,10 @@
 .Menu > nav > a {
     margin-top: 20px;
 }
+
+.Menu .active { /*active is the exact class that NavLink uses */
+    color: darkcyan;
+    font-weight: bold;
+    font-family: Arial;
+    text-decoration: none;
+}

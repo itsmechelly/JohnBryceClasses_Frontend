@@ -9,13 +9,12 @@ import Home from "../../HomeArea/Home/Home";
 // import AddProduct from "../../ProductsArea/AddProduct/AddProduct";
 // import ProductDetails from "../../ProductsArea/ProductDetails/ProductDetails";
 import ProductList from "../../ProductsArea/ProductList/ProductList";
-// import Page404 from "../../SharedArea/Page404/Page404";
+import Page404 from "../../SharedArea/Page404/Page404";
 
 function Routing(): JSX.Element {
     return (
         <div className="Routing">
             <Switch>
-                <Redirect from="/" to="/home" exact />
                 <Route path="/home" component={Home} exact />
                 <Route path="/products" component={ProductList} exact />
                 {/* <Route path="/products/details/:id" component={ProductDetails} exact />
@@ -25,11 +24,14 @@ function Routing(): JSX.Element {
 
                 {/* <Route path="/register" component={Register} exact />
                 <Route path="/login" component={Login} exact />
-                <Route path="/logout" component={Logout} exact /> */}
+            <Route path="/logout" component={Logout} exact /> */}
 
 
                 <Route path="/contact-us" component={ContactUs} exact />
-                {/* <Route component={Page404} /> */}
+
+                <Redirect from="/" to="/home" exact />
+                <Route component={Page404} />
+
             </Switch>
         </div>
     );
