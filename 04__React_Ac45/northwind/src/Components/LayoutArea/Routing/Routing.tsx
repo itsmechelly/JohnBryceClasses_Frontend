@@ -1,4 +1,4 @@
-import { Redirect, Route, Switch } from "react-router";
+import { Redirect, Route, Switch } from "react-router-dom";
 import About from "../../AboutArea/About/About";
 // import About from "../../AboutArea/About/About";
 // import Login from "../../AuthArea/Login/Login";
@@ -17,8 +17,8 @@ function Routing(): JSX.Element {
             <Switch>
                 <Redirect from="/" to="/home" exact />
                 <Route path="/home" component={Home} exact />
-                {/* <Route path="/products" component={ProductList} exact />
-                <Route path="/products/details/:id" component={ProductDetails} exact />
+                <Route path="/products" component={ProductList} exact />
+                {/* <Route path="/products/details/:id" component={ProductDetails} exact />
                 <Route path="/products/new/" component={AddProduct} exact /> */}
                 <Route path="/about" component={About} exact />
 

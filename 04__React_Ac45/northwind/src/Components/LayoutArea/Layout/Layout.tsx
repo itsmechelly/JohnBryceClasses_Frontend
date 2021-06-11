@@ -1,5 +1,4 @@
-import ContactUs from "../../ContactUsArea/ContactUs/ContactUs";
-import Home from "../../HomeArea/Home/Home";
+import { BrowserRouter } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import Menu from "../Menu/Menu";
@@ -8,7 +7,7 @@ import "./Layout.css";
 
 function Layout(): JSX.Element { //JSX.Element = The component UI
     return (
-
+        <BrowserRouter>
         <div className="Layout">
             <header>
                 <Header />
@@ -17,14 +16,13 @@ function Layout(): JSX.Element { //JSX.Element = The component UI
                 <Menu />
             </aside>
             <main>
-                {/* <Home/> */}
-                {/* <Routing/> */}
-                <ContactUs />
+                <Routing/>
             </main>
             <footer>
                 <Footer />
             </footer>
         </div>
+        </BrowserRouter>
     );
 }
 
