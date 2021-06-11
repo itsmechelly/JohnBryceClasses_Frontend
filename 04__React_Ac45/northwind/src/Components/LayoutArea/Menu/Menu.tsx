@@ -7,6 +7,7 @@ function Menu(): JSX.Element {
                 <a href="#">Home</a>
                 <a href="#">Products</a>
                 <a href="#">About</a>
+                <a href="#">Contact Us</a>
             </nav>
         </div>
     );
