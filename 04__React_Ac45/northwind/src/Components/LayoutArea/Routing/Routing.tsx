@@ -1,6 +1,5 @@
 import { Redirect, Route, Switch } from "react-router-dom";
 import About from "../../AboutArea/About/About";
-// import About from "../../AboutArea/About/About";
 // import Login from "../../AuthArea/Login/Login";
 // import Logout from "../../AuthArea/Logout/Logout";
 // import Register from "../../AuthArea/Register/Register";
