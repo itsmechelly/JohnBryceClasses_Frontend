@@ -16,16 +16,21 @@ class ProductList extends Component<{}, ProductListState> {
 
     public async componentDidMount() {
 
-        const response = await axios.get<ProductModel[]>("http://localhost:3030/api/products"); // הפקודה הזו תמתין אך הדפדפן לא יתקע
+        try {
+            const response = await axios.get<ProductModel[]>("http://localhost:3030/api/products"); // הפקודה הזו תמתין אך הדפדפן לא יתקע
 
-        this.setState({ products: response.data });
+            this.setState({ products: response.data });
+        }
+        catch (err) {
+            alert("Error: " + err.message);
+        }
     }
 
     public render(): JSX.Element {
         return (
             <div className="ProductList">
                 <h2>Here are our {this.state.products.length} products</h2>
-                {this.state.products.map(p => <span>{p.name} | </span>)}
+                {this.state.products.map(p => <span key={p.id}>{p.name} | </span>)}
             </div>
         );
     }
