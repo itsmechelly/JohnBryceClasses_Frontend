@@ -1,6 +1,7 @@
 import axios from "axios";
 import { Component } from "react";
 import ProductModel from "../../../Models/ProductModel";
+import ProductCard from "../ProductCard/ProductCard";
 import "./ProductList.css";
 
 interface ProductListState {
@@ -29,8 +30,7 @@ class ProductList extends Component<{}, ProductListState> {
     public render(): JSX.Element {
         return (
             <div className="ProductList">
-                <h2>Here are our {this.state.products.length} products</h2>
-                {this.state.products.map(p => <span key={p.id}>{p.name} | </span>)}
+                {this.state.products.map(p => <ProductCard key={p.id} product={p} />)}
             </div>
         );
     }
