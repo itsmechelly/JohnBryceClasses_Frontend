@@ -1,9 +1,11 @@
+import TotalProducts from "../../ProductsArea/TotalProducts/TotalProducts";
 import "./Footer.css";
 
 function Footer(): JSX.Element {
     return (
         <div className="Footer">
-			<p>All Rights Reserved &copy;</p>
+            <TotalProducts />
+            <p>All Rights Reserved &copy;</p>
         </div>
     );
 }
