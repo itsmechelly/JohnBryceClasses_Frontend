@@ -26,7 +26,7 @@ class ProductionGlobals extends Globals {
     };
 }
 
-//Creating the current object
+//Creating the current objectד
 const globals = process.env.NODE_ENV === "development" ? new DevelopmentGlobals() : new ProductionGlobals();
 
 export default globals;
